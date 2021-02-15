@@ -112,6 +112,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FacturacionSB.Properties.Resources.adab41ec5b5f829e01ac27a7dd9fdfd2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(437, 244);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);

@@ -159,7 +159,7 @@
             this.rangoDeFacturacionToolStripMenuItem,
             this.razonSocialToolStripMenuItem});
             this.infoEmpresaToolStripMenuItem.Name = "infoEmpresaToolStripMenuItem";
-            this.infoEmpresaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.infoEmpresaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.infoEmpresaToolStripMenuItem.Text = "Info Empresa";
             // 
             // rangoDeFacturacionToolStripMenuItem
@@ -181,7 +181,7 @@
             this.agregarClientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarClientesToolStripMenuItem1});
             this.agregarClientesToolStripMenuItem.Name = "agregarClientesToolStripMenuItem";
-            this.agregarClientesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.agregarClientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.agregarClientesToolStripMenuItem.Text = "Clientes";
             this.agregarClientesToolStripMenuItem.Click += new System.EventHandler(this.agregarClientesToolStripMenuItem_Click);
             // 
@@ -197,7 +197,7 @@
             this.crearUsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearUsuariosToolStripMenuItem1});
             this.crearUsuariosToolStripMenuItem.Name = "crearUsuariosToolStripMenuItem";
-            this.crearUsuariosToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.crearUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.crearUsuariosToolStripMenuItem.Text = "Usuarios";
             this.crearUsuariosToolStripMenuItem.Click += new System.EventHandler(this.crearUsuariosToolStripMenuItem_Click);
             // 

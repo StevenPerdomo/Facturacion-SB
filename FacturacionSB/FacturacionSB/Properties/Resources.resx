@@ -121,13 +121,16 @@
   <data name="pngtree-vector-lock-icon-png-image_316863" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-vector-lock-icon-png-image_316863.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="seic87x97" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seic87x97.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PQT-SEIC-NUEVO-LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PQT-SEIC-NUEVO-LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PQT-SEIC-NUEVO-LOGO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PQT-SEIC-NUEVO-LOGO1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="seic87x97" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seic87x97.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="adab41ec5b5f829e01ac27a7dd9fdfd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adab41ec5b5f829e01ac27a7dd9fdfd2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

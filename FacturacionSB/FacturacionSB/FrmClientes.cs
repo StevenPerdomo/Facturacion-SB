@@ -55,12 +55,37 @@ namespace FacturacionSB
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-
+            _clientes.AgregarCliente();
+            listaClienteBindingSource.MoveLast();
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            listaClienteBindingSource.EndEdit();
+
+            var cliente = (Cliente)listaClienteBindingSource.Current;
+
+            var resultado = _clientes.GuardarCliente(cliente);
+
+            if( resultado == true)
+            {
+                listaClienteBindingSource.ResetBindings(false);
+
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error guardando el Cliente");
+            }
         }
     }
 }

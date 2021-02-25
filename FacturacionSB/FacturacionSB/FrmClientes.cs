@@ -105,14 +105,14 @@ namespace FacturacionSB
 
             var resultado = _clientes.GuardarCliente(Cliente);
 
-            if (resultado == true)
+            if (resultado.Exitoso == true)
             {
                 listaClienteBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
             }
             else
             {
-                MessageBox.Show("Ocurrio un error al guardar este registro.");
+                MessageBox.Show(resultado.Mensaje);
             }
         }
 

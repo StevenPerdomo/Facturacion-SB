@@ -107,13 +107,19 @@ namespace BLFacturacionSB
             return ListaCliente;
         }
 
-        public bool GuardarCliente(Cliente cliente)
+        public Resultado GuardarCliente(Cliente cliente)
         {
+            var resultado = Validar(cliente);
+            if ( resultado.Exitoso == false )
+            {
+                return resultado;
+            } 
             if (cliente.Id == 0)
             {
                 cliente.Id = ListaCliente.Max(item => item.Id) + 1;
             }
-                return true;
+            resultado.Exitoso = true;
+            return resultado;
         }
 
         public void AgregarCliente()
@@ -131,19 +137,75 @@ namespace BLFacturacionSB
                 {
                     ListaCliente.Remove(cliente);
                     return true;
-                   }
                 }
-                
-                    return false;
             }
+
+            return false;
+        }
+
+        private Resultado Validar(Cliente cliente)
+        {
+            var resultado = new Resultado();
+            resultado.Exitoso = true;
+
+            if( String.IsNullOrEmpty(cliente.RazonSocial ) == true)
+            {
+                resultado.Mensaje = "Ingrese una Razon Social";
+                resultado.Exitoso = false;
+            }
+
+            if (String.IsNullOrEmpty(cliente.RtnCliente) == true)
+            {
+                resultado.Mensaje = "Ingrese un #RTN";
+                resultado.Exitoso = false;
+            }
+
+            if (String.IsNullOrEmpty(cliente.TermPago) == true)
+            {
+                resultado.Mensaje = "Ingrese un termino de pago";
+                resultado.Exitoso = false;
+            }
+
+            if (String.IsNullOrEmpty(cliente.TipoCliente) == true)
+            {
+                resultado.Mensaje = "Ingrese el tipo de cliente";
+                resultado.Exitoso = false;
+            }
+
+            if (String.IsNullOrEmpty(cliente.Nombrecont) == true)
+            {
+                resultado.Mensaje = "Ingrese un Contacto";
+                resultado.Exitoso = false;
+            }
+
+            if (String.IsNullOrEmpty(cliente.Puesto) == true)
+            {
+                resultado.Mensaje = "Ingrese el Puesto";
+                resultado.Exitoso = false;
+            }
+
+            if (String.IsNullOrEmpty(cliente.Email) == true)
+            {
+                resultado.Mensaje = "Ingrese un un correo valido";
+                resultado.Exitoso = false;
+            }
+
+            if (String.IsNullOrEmpty(cliente.Telefono) == true)
+            {
+                resultado.Mensaje = "Ingrese un #Telefono";
+                resultado.Exitoso = false;
+            }
+
+            return resultado;
+        }
     }
-    
-      
+
+
     public class Cliente
     {
         public int Id { get; set; }
         public string RazonSocial { get; set; }
-        public string RtnCliente  { get; set; }
+        public string RtnCliente { get; set; }
         public string TipoCliente { get; set; }
         public string TermPago { get; set; }
         public string Nombrecont { get; set; }
@@ -151,6 +213,12 @@ namespace BLFacturacionSB
         public string Email { get; set; }
         public string Telefono { get; set; }
         public bool Activo { get; set; }
+    }
+
+    public class Resultado
+    {
+        public bool Exitoso { get; set; }
+        public string Mensaje { get; set; }
     }
   }
 

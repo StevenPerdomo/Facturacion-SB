@@ -1,0 +1,10 @@
+﻿El subproceso 0x3a94 terminó con código 0 (0x0).
+'FacturacionSB.vshost.exe' (CLR v4.0.30319: FacturacionSB.vshost.exe): 'E:\Programas\UNAH PAC 1 2021\L3\FACTURACION SB L3\FacturacionSB\FacturacionSB\bin\Debug\FacturacionSB.exe' cargado. Símbolos cargados.
+'FacturacionSB.vshost.exe' (CLR v4.0.30319: FacturacionSB.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'FacturacionSB.vshost.exe' (CLR v4.0.30319: FacturacionSB.vshost.exe): 'E:\Programas\UNAH PAC 1 2021\L3\FACTURACION SB L3\FacturacionSB\FacturacionSB\bin\Debug\BLSeguridad.dll' cargado. Símbolos cargados.
+'FacturacionSB.vshost.exe' (CLR v4.0.30319: FacturacionSB.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_es_b77a5c561934e089\mscorlib.resources.dll' cargado. El módulo se compiló sin símbolos.
+'FacturacionSB.vshost.exe' (CLR v4.0.30319: FacturacionSB.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms.resources\v4.0_4.0.0.0_es_b77a5c561934e089\System.Windows.Forms.resources.dll' cargado. El módulo se compiló sin símbolos.
+'FacturacionSB.vshost.exe' (CLR v4.0.30319: FacturacionSB.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+El subproceso 0x2588 terminó con código 0 (0x0).
+El subproceso 0x213c terminó con código 0 (0x0).
+El programa '[6792] FacturacionSB.vshost.exe' terminó con código 0 (0x0).

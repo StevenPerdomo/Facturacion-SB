@@ -46,7 +46,7 @@ namespace BLFacturacionSB
         public void AgregarCliente()
         {
             var nuevoCliente = new Cliente();
-            ListaCliente.Add(nuevoCliente);
+          ListaCliente.Add(nuevoCliente);
 
         }
 

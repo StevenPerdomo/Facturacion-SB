@@ -69,7 +69,7 @@ namespace BLFacturacionSB
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if( String.IsNullOrEmpty(cliente.RazonSocial ) == true)
+            if(string.IsNullOrEmpty(cliente.RazonSocial ) == true)
             {
                 resultado.Mensaje = "Ingrese una Razon Social";
                 resultado.Exitoso = false;

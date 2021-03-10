@@ -34,11 +34,11 @@ namespace BLFacturacionSB
             if ( resultado.Exitoso == false )
             {
                 return resultado;
-            } 
-            if (cliente.Id == 0)
-            {
-                cliente.Id = ListaCliente.Max(item => item.Id) + 1;
             }
+
+            _contexto.SaveChanges();
+
+
             resultado.Exitoso = true;
             return resultado;
         }
@@ -57,6 +57,7 @@ namespace BLFacturacionSB
                 if (cliente.Id == id)
                 {
                     ListaCliente.Remove(cliente);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
@@ -134,6 +135,7 @@ namespace BLFacturacionSB
         public string Email { get; set; }
         public string Telefono { get; set; }
         public bool Activo { get; set; }
+        public byte[] Foto { get; set; }
     }
 
     public class Resultado

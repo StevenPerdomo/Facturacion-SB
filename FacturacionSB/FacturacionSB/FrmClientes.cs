@@ -1,5 +1,7 @@
 ﻿using BLFacturacionSB;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace FacturacionSB
@@ -103,12 +105,22 @@ namespace FacturacionSB
             listaClienteBindingSource.EndEdit();
             var Cliente = (Cliente)listaClienteBindingSource.Current;
 
+            if(fotoPictureBox != null)
+            {
+                Cliente.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                Cliente.Foto = null;
+            }
+
             var resultado = _clientes.GuardarCliente(Cliente);
 
             if (resultado.Exitoso == true)
             {
                 listaClienteBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Cliente Guardado");
             }
             else
             {
@@ -175,6 +187,27 @@ namespace FacturacionSB
         {
             DeshabilitarHabilitarBotones(true);
             Eliminar(0);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            var archivo = openFileDialog1.FileName;
+
+            if ( archivo != "" )
+            {
+                var fileInfo = new FileInfo(archivo);
+                var fileStream = fileInfo.OpenRead();
+
+                fotoPictureBox.Image = Image.FromStream(fileStream);
+            }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fotoPictureBox.Image = null;
         }
     }
 }

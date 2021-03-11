@@ -191,16 +191,27 @@ namespace FacturacionSB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            var archivo = openFileDialog1.FileName;
-
-            if ( archivo != "" )
+            var Cliente = (Cliente)listaClienteBindingSource.Current;
+        
+            if (Cliente != null)
             {
-                var fileInfo = new FileInfo(archivo);
-                var fileStream = fileInfo.OpenRead();
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
 
-                fotoPictureBox.Image = Image.FromStream(fileStream);
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var fileStream = fileInfo.OpenRead();
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);
+                }
+
             }
+            else
+            {
+                MessageBox.Show("Cree un Cliente antes de asignarle una imagen");
+            }
+
 
 
         }

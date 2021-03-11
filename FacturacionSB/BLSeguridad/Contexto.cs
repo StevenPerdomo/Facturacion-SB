@@ -18,6 +18,7 @@ namespace BLFacturacionSB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
         }
 
         public DbSet<Cliente> Clientes { get; set; }

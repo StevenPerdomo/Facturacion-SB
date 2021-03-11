@@ -9,7 +9,7 @@ namespace FacturacionSB
     public partial class FrmClientes : Form
     {
         ClientesBL _clientes;
-
+        DepartamentoBL _departamentoBL;
 
         public FrmClientes()
         {
@@ -17,6 +17,9 @@ namespace FacturacionSB
 
             _clientes = new ClientesBL();
             listaClienteBindingSource.DataSource = _clientes.ObtenerClientes();
+
+            _departamentoBL = new DepartamentoBL();
+            listaDepartamentoBindingSource.DataSource = _departamentoBL.ObtenerDepartamento();
         }
 
         private void label1_Click(object sender, EventArgs e)

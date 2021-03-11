@@ -20,7 +20,7 @@ namespace BLFacturacionSB
 
             foreach (var usuarioAdmin in usuarios)
             {
-                if (usuario == usuarioAdmin.Nombre && contrasena == usuarioAdmin.contrasena)
+                if (usuario == usuarioAdmin.Nombre && contrasena == usuarioAdmin.Contrasena)
                 {
                     return true;
                 }
@@ -29,5 +29,12 @@ namespace BLFacturacionSB
 
                 return false;
         }
+    }
+
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Contrasena { get; set; }
     }
 }

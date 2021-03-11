@@ -153,6 +153,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BLFacturacionSB.Cliente.datasource" />
     <None Include="Properties\DataSources\BLFacturacionSB.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\BLFacturacionSB.DepartamentoBL.datasource" />
     <None Include="Properties\DataSources\BLFacturacionSB.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

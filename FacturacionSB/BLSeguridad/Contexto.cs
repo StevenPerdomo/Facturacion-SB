@@ -25,7 +25,7 @@ namespace BLFacturacionSB
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Departamento> Departamento { get; set; }
-        public DbSet<usuarios> Usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         //public static implicit operator Contexto(BidingList<Departamento> v)
         //  {

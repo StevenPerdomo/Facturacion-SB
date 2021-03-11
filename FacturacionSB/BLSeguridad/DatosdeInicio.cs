@@ -11,9 +11,9 @@ namespace BLFacturacionSB
     {
         protected override void Seed (Contexto contexto)
         {
-             var usuarioAdmin = new usuarios();
+             var usuarioAdmin = new Usuario();
              usuarioAdmin.Nombre = "admin";
-             usuarioAdmin.contrasena = "123";
+             usuarioAdmin.Contrasena = "123";
              contexto.Usuarios.Add(usuarioAdmin);
 
 

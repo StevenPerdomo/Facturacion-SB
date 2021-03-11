@@ -118,6 +118,12 @@ namespace BLFacturacionSB
                 resultado.Exitoso = false;
             }
 
+            if(cliente.DepartamentoId == 0)
+            {
+                resultado.Mensaje = "Ingrese un Departamento";
+                resultado.Exitoso = false;
+            }
+
             return resultado;
         }
     }

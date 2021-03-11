@@ -5,6 +5,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLFacturacionSB;
 
 namespace BLFacturacionSB
 {
@@ -18,9 +19,17 @@ namespace BLFacturacionSB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+             //Agrega datos de inicio
 
         }
 
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Departamento> Departamento { get; set; }
+        //public DbSet<Usuario> Usuarios { get; set; }
+
+        //public static implicit operator Contexto(BidingList<Departamento> v)
+        //  {
+        //     throw new NotImplementedException();
+        //   }
     }
 }

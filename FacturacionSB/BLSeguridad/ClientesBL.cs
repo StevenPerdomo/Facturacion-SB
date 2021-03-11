@@ -131,6 +131,8 @@ namespace BLFacturacionSB
         public string TipoCliente { get; set; }
         public string TermPago { get; set; }
         public string Nombrecont { get; set; }
+        public int DepartamentoId { get; set; }
+        public Departamento Departamento { get; set; }
         public string Puesto { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }

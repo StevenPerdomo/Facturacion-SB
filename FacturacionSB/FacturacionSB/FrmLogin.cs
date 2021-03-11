@@ -16,7 +16,7 @@ namespace FacturacionSB
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,10 +28,11 @@ namespace FacturacionSB
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+
             var resultado = _seguridad.Acceder(usuario, contrasena);
-
-
-
+     
             if(resultado == true)
             {
                 this.Close();

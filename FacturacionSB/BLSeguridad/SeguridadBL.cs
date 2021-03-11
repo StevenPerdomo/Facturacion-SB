@@ -8,15 +8,19 @@ namespace BLFacturacionSB
 {
     public class SeguridadBL
     {
+        Contexto _contexto;
+        public SeguridadBL()
+        {
+            _contexto = new Contexto();
+        }
+                    
         public bool Acceder(string usuario, string contrasena)
         {
-            if(usuario == "admin" && contrasena == "123")
+            var usuarios = _contexto.Usuarios.ToList();
+
+            foreach (var usuarioAdmin in usuarios)
             {
-                return true;
-            }
-            else
-            {
-                if(usuario == "user" && contrasena == "1234")
+                if (usuario == usuarioAdmin.Nombre && contrasena == usuarioAdmin.contrasena)
                 {
                     return true;
                 }

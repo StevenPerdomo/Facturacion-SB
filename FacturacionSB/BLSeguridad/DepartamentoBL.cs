@@ -21,7 +21,7 @@ namespace BLFacturacionSB
             ListaDepartamento = new BindingList<Departamento>();
         }
 
-        public BindingList<Departamento> ObtenerDepartamenro()
+        public BindingList<Departamento> ObtenerDepartamento()
         {
             _contexto.Departamento.Load();
             ListaDepartamento = _contexto.Departamento.Local.ToBindingList();

@@ -19,13 +19,13 @@ namespace BLFacturacionSB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-             //Agrega datos de inicio
+            Database.SetInitializer(new DatosdeInicio());//Agrega datos de inicio
 
         }
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Departamento> Departamento { get; set; }
-        //public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<usuarios> Usuarios { get; set; }
 
         //public static implicit operator Contexto(BidingList<Departamento> v)
         //  {

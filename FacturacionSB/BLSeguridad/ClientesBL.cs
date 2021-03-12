@@ -28,6 +28,7 @@ namespace BLFacturacionSB
             return ListaCliente;
         }
 
+  
         public Resultado GuardarCliente(Cliente cliente)
         {
             var resultado = Validar(cliente);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,12 +31,21 @@ namespace FacturacionSB
 
         }
 
-        private void ToolstripButtonSalvar_Click(object sender, EventArgs e)
+        private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             listaProductosBindingSource.EndEdit();
             var producto = (Producto)listaProductosBindingSource.Current;
 
-       
+            if (imagProdPictureBox.Image != null)
+            {
+                producto.ImagProd = Program.imageToByteArray(imagProdPictureBox.Image);
+            }
+            else
+            {
+                producto.ImagProd = null;
+            }
+
+
             var resultado = _productos.GuardarProducto(producto);
 
             if (resultado.Exitoso == true)
@@ -50,7 +60,7 @@ namespace FacturacionSB
             }
         }
 
-        private void ToolstripButtonAgregar_Click(object sender, EventArgs e)
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             _productos.AgregarProducto();
             listaProductosBindingSource.MoveLast();
@@ -81,7 +91,7 @@ namespace FacturacionSB
         }
 
 
-        private void ToolstripButtonEliminar_Click(object sender, EventArgs e)
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
 
 
@@ -114,7 +124,7 @@ namespace FacturacionSB
             }
         }
    
-        private void ToolstripButtonCancelar_Click(object sender, EventArgs e)
+        private void toolStripButtonCancelar_Click_1(object sender, EventArgs e)
         {
             DeshabilitarHabilitarBotones(true);
             Eliminar(0);
@@ -128,6 +138,41 @@ namespace FacturacionSB
         private void categoriaIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var producto = (Producto)listaProductosBindingSource.Current;
+
+            if (producto != null)
+            {
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var fileStream = fileInfo.OpenRead();
+
+                    imagProdPictureBox.Image = Image.FromStream(fileStream);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cree un Producto ante de Agregar una imagen");
+            }
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+ 
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            imagProdPictureBox = null;
         }
     }
 }

@@ -89,6 +89,19 @@ namespace BLFacturacionSB
             Departamento18.Descripcion = "Yoro";
             contexto.Departamento.Add(Departamento18);
 
+
+            var categoria1 = new Categoria();
+            categoria1.Descripcion = "Servicios";
+            contexto.Categorias.Add(categoria1);
+
+            var categoria2 = new Categoria();
+            categoria2.Descripcion = "Consumible";
+            contexto.Categorias.Add(categoria2);
+
+            var categoria3 = new Categoria();
+            categoria3.Descripcion = "Inventariable";
+            contexto.Categorias.Add(categoria3);
+
             base.Seed(contexto);
         }
 

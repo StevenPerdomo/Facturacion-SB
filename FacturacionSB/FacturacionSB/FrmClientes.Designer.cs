@@ -557,6 +557,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // listaDepartamentoBindingSource
             // 

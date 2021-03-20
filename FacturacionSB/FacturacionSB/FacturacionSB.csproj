@@ -111,6 +111,12 @@
     <Compile Include="FrmMenuPrincipal.Designer.cs">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCAI.resx">
@@ -140,6 +146,9 @@
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -151,9 +160,13 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BLFacturacionSB.Categoria.datasource" />
+    <None Include="Properties\DataSources\BLFacturacionSB.CategoriaBL.datasource" />
     <None Include="Properties\DataSources\BLFacturacionSB.Cliente.datasource" />
     <None Include="Properties\DataSources\BLFacturacionSB.ClientesBL.datasource" />
     <None Include="Properties\DataSources\BLFacturacionSB.DepartamentoBL.datasource" />
+    <None Include="Properties\DataSources\BLFacturacionSB.Producto.datasource" />
+    <None Include="Properties\DataSources\BLFacturacionSB.ProductosBL.datasource" />
     <None Include="Properties\DataSources\BLFacturacionSB.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

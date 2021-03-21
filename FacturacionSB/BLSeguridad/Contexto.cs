@@ -26,13 +26,8 @@ namespace BLFacturacionSB
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Departamento> Departamento { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Producto> Productos { get; set; }
-
-
-        //public static implicit operator Contexto(BidingList<Departamento> v)
-        //  {
-        //     throw new NotImplementedException();
-        //   }
+        public DbSet<Categoria> Categorias { get; set; }
+       
     }
 }

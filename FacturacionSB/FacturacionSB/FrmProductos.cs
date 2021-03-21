@@ -16,6 +16,7 @@ namespace FacturacionSB
     public partial class FrmProductos : Form
     {
         ProductosBL _productos;
+        CategoriaBL _categorias;
 
 
         public FrmProductos()
@@ -24,6 +25,10 @@ namespace FacturacionSB
 
             _productos = new ProductosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+
+            _categorias = new CategoriaBL();
+            listaProductosBindingSource.DataSource = _categorias.ObtenerCategorias();
+
         }
 
         private void FrmProductos_Load(object sender, EventArgs e)
@@ -31,7 +36,7 @@ namespace FacturacionSB
 
         }
 
-        private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void BindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             listaProductosBindingSource.EndEdit();
             var producto = (Producto)listaProductosBindingSource.Current;
@@ -82,11 +87,6 @@ namespace FacturacionSB
             bindingNavigatorDeleteItem.Enabled = valor;
 
             toolStripButtonCancelar.Visible = !valor;
-
-
-            //ToolstripButtonAgregar.Enabled = valor;
-            //ToolstripButtonEliminar.Enabled = valor;
-            //ToolstripButtonCancelar.Visible = !valor;
             
         }
 
@@ -144,10 +144,12 @@ namespace FacturacionSB
         {
             var producto = (Producto)listaProductosBindingSource.Current;
 
+            openFileDialog1.ShowDialog();
+            var archivo = openFileDialog1.FileName;
+
             if (producto != null)
             {
-                openFileDialog1.ShowDialog();
-                var archivo = openFileDialog1.FileName;
+             
 
                 if (archivo != "")
                 {
@@ -172,7 +174,9 @@ namespace FacturacionSB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            imagProdPictureBox = null;
+            imagProdPictureBox.Image = null;
         }
+
+       
     }
 }

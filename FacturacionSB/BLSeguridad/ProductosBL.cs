@@ -29,6 +29,15 @@ namespace BLFacturacionSB
             return ListaProductos;
         }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
         public ResultadoProducto GuardarProducto(Producto producto)
         {
             var resultado = Validar(producto);
@@ -99,7 +108,7 @@ namespace BLFacturacionSB
                 resultado.Exitoso = false;
             }
 
-            // resultado.Exitoso = true;
+            resultado.Exitoso = true;
             return resultado;
 
         }
@@ -117,7 +126,13 @@ namespace BLFacturacionSB
         public Categoria Categoria { get; set; }
 
 
+        public Producto()
+        {
+            Activo = true;
+        }
+
     }
+
 
     public class ResultadoProducto
     {

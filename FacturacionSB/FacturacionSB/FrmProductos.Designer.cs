@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
             System.Windows.Forms.Label precioLabel;
-            System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label existenciaLabel;
-            System.Windows.Forms.Label categoriaIdLabel;
             System.Windows.Forms.Label activoLabel;
-            System.Windows.Forms.Label idLabel1;
             System.Windows.Forms.Label descripcionLabel1;
-            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.Windows.Forms.Label categoriaIdLabel;
+            System.Windows.Forms.Label idLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
             this.imagProdPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -52,33 +50,83 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.listaProductosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
             this.existenciaTextBox = new System.Windows.Forms.TextBox();
-            this.categoriaIdTextBox = new System.Windows.Forms.TextBox();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.descripcionTextBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             precioLabel = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
-            categoriaIdLabel = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
-            idLabel1 = new System.Windows.Forms.Label();
             descripcionLabel1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
+            categoriaIdLabel = new System.Windows.Forms.Label();
+            idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imagProdPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).BeginInit();
             this.listaProductosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // listaProductosBindingSource
+            // precioLabel
             // 
-            this.listaProductosBindingSource.DataSource = typeof(BLFacturacionSB.Producto);
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(78, 175);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 11;
+            precioLabel.Text = "Precio:";
+            // 
+            // existenciaLabel
+            // 
+            existenciaLabel.AutoSize = true;
+            existenciaLabel.Location = new System.Drawing.Point(78, 123);
+            existenciaLabel.Name = "existenciaLabel";
+            existenciaLabel.Size = new System.Drawing.Size(58, 13);
+            existenciaLabel.TabIndex = 7;
+            existenciaLabel.Text = "Existencia:";
+            // 
+            // activoLabel
+            // 
+            activoLabel.AutoSize = true;
+            activoLabel.Location = new System.Drawing.Point(78, 218);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.TabIndex = 1;
+            activoLabel.Text = "Activo:";
+            // 
+            // descripcionLabel1
+            // 
+            descripcionLabel1.AutoSize = true;
+            descripcionLabel1.Location = new System.Drawing.Point(79, 68);
+            descripcionLabel1.Name = "descripcionLabel1";
+            descripcionLabel1.Size = new System.Drawing.Size(66, 13);
+            descripcionLabel1.TabIndex = 13;
+            descripcionLabel1.Text = "Descripcion:";
+            // 
+            // categoriaIdLabel
+            // 
+            categoriaIdLabel.AutoSize = true;
+            categoriaIdLabel.Location = new System.Drawing.Point(78, 94);
+            categoriaIdLabel.Name = "categoriaIdLabel";
+            categoriaIdLabel.Size = new System.Drawing.Size(55, 13);
+            categoriaIdLabel.TabIndex = 19;
+            categoriaIdLabel.Text = "Categoria:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(78, 149);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 9;
+            idLabel.Text = "Id:";
             // 
             // imagProdPictureBox
             // 
@@ -104,7 +152,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
-//            openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -194,14 +241,14 @@
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
-            // listaProductosBindingNavigatorSaveItem
+            // BindingNavigatorSaveItem
             // 
-            this.listaProductosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listaProductosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaProductosBindingNavigatorSaveItem.Image")));
-            this.listaProductosBindingNavigatorSaveItem.Name = "listaProductosBindingNavigatorSaveItem";
-            this.listaProductosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.listaProductosBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.listaProductosBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaProductosBindingNavigatorSaveItem_Click);
+            this.BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("BindingNavigatorSaveItem.Image")));
+            this.BindingNavigatorSaveItem.Name = "BindingNavigatorSaveItem";
+            this.BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.BindingNavigatorSaveItem.Text = "Guardar datos";
+            this.BindingNavigatorSaveItem.Click += new System.EventHandler(this.BindingNavigatorSaveItem_Click);
             // 
             // toolStripButtonCancelar
             // 
@@ -232,7 +279,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.listaProductosBindingNavigatorSaveItem,
+            this.BindingNavigatorSaveItem,
             this.toolStripButtonCancelar});
             this.listaProductosBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.listaProductosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -253,32 +300,6 @@
             this.precioTextBox.Size = new System.Drawing.Size(218, 20);
             this.precioTextBox.TabIndex = 12;
             // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(78, 175);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 11;
-            precioLabel.Text = "Precio:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(151, 146);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(218, 20);
-            this.idTextBox.TabIndex = 10;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(78, 149);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 9;
-            idLabel.Text = "Id:";
-            // 
             // existenciaTextBox
             // 
             this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Existencia", true));
@@ -286,32 +307,6 @@
             this.existenciaTextBox.Name = "existenciaTextBox";
             this.existenciaTextBox.Size = new System.Drawing.Size(218, 20);
             this.existenciaTextBox.TabIndex = 8;
-            // 
-            // existenciaLabel
-            // 
-            existenciaLabel.AutoSize = true;
-            existenciaLabel.Location = new System.Drawing.Point(78, 123);
-            existenciaLabel.Name = "existenciaLabel";
-            existenciaLabel.Size = new System.Drawing.Size(58, 13);
-            existenciaLabel.TabIndex = 7;
-            existenciaLabel.Text = "Existencia:";
-            // 
-            // categoriaIdTextBox
-            // 
-            this.categoriaIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "CategoriaId", true));
-            this.categoriaIdTextBox.Location = new System.Drawing.Point(151, 94);
-            this.categoriaIdTextBox.Name = "categoriaIdTextBox";
-            this.categoriaIdTextBox.Size = new System.Drawing.Size(218, 20);
-            this.categoriaIdTextBox.TabIndex = 4;
-            // 
-            // categoriaIdLabel
-            // 
-            categoriaIdLabel.AutoSize = true;
-            categoriaIdLabel.Location = new System.Drawing.Point(74, 94);
-            categoriaIdLabel.Name = "categoriaIdLabel";
-            categoriaIdLabel.Size = new System.Drawing.Size(67, 13);
-            categoriaIdLabel.TabIndex = 3;
-            categoriaIdLabel.Text = "Categoria Id:";
             // 
             // activoCheckBox
             // 
@@ -323,33 +318,6 @@
             this.activoCheckBox.Text = "checkBox1";
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // activoLabel
-            // 
-            activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(78, 218);
-            activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
-            activoLabel.TabIndex = 1;
-            activoLabel.Text = "Activo:";
-            // 
-            // idTextBox1
-            // 
-            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Categoria.Id", true));
-            this.idTextBox1.Location = new System.Drawing.Point(151, 39);
-            this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.ReadOnly = true;
-            this.idTextBox1.Size = new System.Drawing.Size(218, 20);
-            this.idTextBox1.TabIndex = 16;
-            // 
-            // idLabel1
-            // 
-            idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(79, 42);
-            idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(19, 13);
-            idLabel1.TabIndex = 15;
-            idLabel1.Text = "Id:";
-            // 
             // descripcionTextBox1
             // 
             this.descripcionTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Categoria.Descripcion", true));
@@ -357,15 +325,6 @@
             this.descripcionTextBox1.Name = "descripcionTextBox1";
             this.descripcionTextBox1.Size = new System.Drawing.Size(218, 20);
             this.descripcionTextBox1.TabIndex = 14;
-            // 
-            // descripcionLabel1
-            // 
-            descripcionLabel1.AutoSize = true;
-            descripcionLabel1.Location = new System.Drawing.Point(79, 68);
-            descripcionLabel1.Name = "descripcionLabel1";
-            descripcionLabel1.Size = new System.Drawing.Size(66, 13);
-            descripcionLabel1.TabIndex = 13;
-            descripcionLabel1.Text = "Descripcion:";
             // 
             // button2
             // 
@@ -377,22 +336,35 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(151, 146);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(218, 20);
+            this.idTextBox.TabIndex = 10;
+            // 
+            // listaProductosBindingSource
+            // 
+            this.listaProductosBindingSource.DataSource = typeof(BLFacturacionSB.Producto);
+            // 
+            // listaCategoriasBindingSource
+            // 
+            this.listaCategoriasBindingSource.DataSource = typeof(BLFacturacionSB.Categoria);
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 338);
+            this.ClientSize = new System.Drawing.Size(630, 508);
+            this.Controls.Add(categoriaIdLabel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.imagProdPictureBox);
             this.Controls.Add(descripcionLabel1);
             this.Controls.Add(this.descripcionTextBox1);
-            this.Controls.Add(idLabel1);
-            this.Controls.Add(this.idTextBox1);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
-            this.Controls.Add(categoriaIdLabel);
-            this.Controls.Add(this.categoriaIdTextBox);
             this.Controls.Add(existenciaLabel);
             this.Controls.Add(this.existenciaTextBox);
             this.Controls.Add(idLabel);
@@ -403,11 +375,12 @@
             this.Name = "FrmProductos";
             this.Text = "FrmProductos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagProdPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).EndInit();
             this.listaProductosBindingNavigator.ResumeLayout(false);
             this.listaProductosBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,16 +403,15 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton listaProductosBindingNavigatorSaveItem;
+        private System.Windows.Forms.ToolStripButton BindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
         private System.Windows.Forms.BindingNavigator listaProductosBindingNavigator;
         private System.Windows.Forms.TextBox precioTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox existenciaTextBox;
-        private System.Windows.Forms.TextBox categoriaIdTextBox;
         private System.Windows.Forms.CheckBox activoCheckBox;
-        private System.Windows.Forms.TextBox idTextBox1;
         private System.Windows.Forms.TextBox descripcionTextBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
+        private System.Windows.Forms.TextBox idTextBox;
     }
 }

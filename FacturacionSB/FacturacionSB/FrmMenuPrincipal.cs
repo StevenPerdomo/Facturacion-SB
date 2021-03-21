@@ -103,7 +103,12 @@ namespace FacturacionSB
             Application.Exit();
         }
 
-        private void crearProductosToolStripMenuItem_Click(object sender, EventArgs e)
+       /* private void crearProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                   
+        }*/
+
+        private void crearProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frmProductos = new FrmProductos();
             frmProductos.MdiParent = this;

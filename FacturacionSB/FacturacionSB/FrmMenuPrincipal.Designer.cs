@@ -46,13 +46,14 @@
             this.razonSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarClientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearUsuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -195,6 +196,14 @@
             this.agregarClientesToolStripMenuItem1.Text = "Agregar Clientes";
             this.agregarClientesToolStripMenuItem1.Click += new System.EventHandler(this.agregarClientesToolStripMenuItem1_Click);
             // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearProductoToolStripMenuItem});
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productosToolStripMenuItem.Text = "Producto";
+            // 
             // crearUsuariosToolStripMenuItem
             // 
             this.crearUsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -207,7 +216,7 @@
             // crearUsuariosToolStripMenuItem1
             // 
             this.crearUsuariosToolStripMenuItem1.Name = "crearUsuariosToolStripMenuItem1";
-            this.crearUsuariosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.crearUsuariosToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.crearUsuariosToolStripMenuItem1.Text = "Crear Usuarios";
             // 
             // loginToolStripMenuItem
@@ -232,21 +241,14 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+
             // 
-            // productosToolStripMenuItem
+            // crearProductoToolStripMenuItem
             // 
-            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearProductosToolStripMenuItem});
-            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.productosToolStripMenuItem.Text = "Productos";
-            // 
-            // crearProductosToolStripMenuItem
-            // 
-            this.crearProductosToolStripMenuItem.Name = "crearProductosToolStripMenuItem";
-            this.crearProductosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.crearProductosToolStripMenuItem.Text = "Crear Productos";
-            this.crearProductosToolStripMenuItem.Click += new System.EventHandler(this.crearProductosToolStripMenuItem_Click);
+            this.crearProductoToolStripMenuItem.Name = "crearProductoToolStripMenuItem";
+            this.crearProductoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.crearProductoToolStripMenuItem.Text = "Crear producto";
+            this.crearProductoToolStripMenuItem.Click += new System.EventHandler(this.crearProductoToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -295,6 +297,7 @@
         private System.Windows.Forms.ToolStripMenuItem rentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearProductoToolStripMenuItem;
     }
 }
 
